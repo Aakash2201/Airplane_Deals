@@ -22,7 +22,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-info-subtle">
         <div class="container">
-            <a class="navbar-brand" href="#" style="color: #2f2f2f;">Hello, I'm Aakash !!!  ( This Website is still under Development )</a>
+            <a class="navbar-brand" href="#" style="color: #2f2f2f;">Hello, I'm Aakash !!! ( This Website is still under Development )</a>
         </div>
     </nav>
 
@@ -31,17 +31,21 @@
             <section class="col-md-12 col-lg-6">
                 <div class="card mt-3">
                     <div class="card-body">
-                        <div class="text-center mb-3">
+
+                        <div class="text-center mb-3 background_header_tab">
                             <h5 class="card-title">Find the Cheapest Plane Ticket!</h5>
                         </div>
+
                         <div class="mb-3">
                             <label for="temp_source" class="form-label">From</label>
                             <input type="text" class="form-control" id="temp_source" placeholder="Source (BOM)">
                         </div>
+
                         <div class="mb-3">
                             <label for="temp_destination" class="form-label">To</label>
                             <input type="text" class="form-control" id="temp_destination" placeholder="Destination (DEL)">
                         </div>
+
                         <button class="btn btn-outline-success w-100" onclick="submit()">Submit</button>
                     </div>
                 </div>
@@ -49,10 +53,13 @@
             <section class="col-md-12 col-lg-6" id="output_tab" style="display: none;">
                 <div class="card mt-3">
                     <div class="card-body">
-                        <div class="text-center mb-3">
+
+                        <div class="text-center mb-3 background_header_tab">
                             <h5 id="output_destination_tab" class="card-title">Flight Details</h5>
                         </div>
+
                         <div id="output_details"></div>
+
                     </div>
                 </div>
             </section>
