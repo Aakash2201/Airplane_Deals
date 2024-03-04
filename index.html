@@ -4,6 +4,8 @@
 <head>
     <title>Airplane Simulator</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Adding local bootstrap css files into our code from bootstrap folder -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- Assuming this contains custom styles -->
@@ -17,61 +19,43 @@
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 </head>
 
-<body style="width: 100%;">
-    <section>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-info-subtle">
-            <div class="container">
-                <a class="navbar-brand" href="#" style="color: #2f2f2f;">Hello, I'm Aakash !!! ( Under Development ) </a>
-            </div>
-        </nav>
-    </section>
+<body>
+    <nav class="navbar navbar-expand-lg bg-info-subtle">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #2f2f2f;">Hello, I'm Aakash !!!</a>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="row align-items-start">
-            <section class="col-md-6">
-                <!-- Content Section -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 offset-md-1 text-center">
-                            <div class="card mt-5">
-                                <div class="card-body">
-                                    <div style="padding: 4%; margin-bottom: 7%; margin-top: 1%; border-radius: 20px; background-color: #CBF1F5; color: rgb(0, 0, 68);">
-                                        <h5 class="card-title" style="font-family: Arial, Helvetica, sans-serif;">Find cheapest plane ticket !</h5>
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon2">FROM</span>
-                                        <input type="text" class="form-control" id="temp_source" placeholder="Source (BOM)" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon2" style="padding-left: 5%; padding-right: 5%;">TO</span>
-                                        <input type="text" class="form-control" id="temp_destination" placeholder="Destination (DEL)" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    </div>
-
-                                    <button style="margin-top: 4%; margin-bottom: 4%;" class="btn btn-outline-success" onclick="submit()">SUBMIT</button>
-                                </div>
-                            </div>
+            <section class="col-md-12 col-lg-6">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <h5 class="card-title">Find the Cheapest Plane Ticket!</h5>
                         </div>
+                        <div class="mb-3">
+                            <label for="temp_source" class="form-label">From</label>
+                            <input type="text" class="form-control" id="temp_source" placeholder="Source (BOM)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="temp_destination" class="form-label">To</label>
+                            <input type="text" class="form-control" id="temp_destination" placeholder="Destination (DEL)">
+                        </div>
+                        <button class="btn btn-outline-success w-100" onclick="submit()">Submit</button>
                     </div>
                 </div>
             </section>
-            <section class="col-md-6" id="output_tab" style="display: none;">
-              <div class="col-md-10 offset-md-1 text-center">
-                  <div class="card mt-5">
-                      <div class="card-body">
-
-                          <div style="padding: 4%; margin-bottom: 4%; border-radius: 20px; background-color: #CBF1F5; color: rgb(0, 0, 68);">
-                              <h5 id="output_destination_tab" class="card-title" style="font-family: Arial, Helvetica, sans-serif;">Find cheapest plane ticket !</h5>
-                          </div>
-
-                          <div id="output_details" style="margin-top: 20px;"></div>
-
-                      </div>
-                  </div>
-              </div>
-          </section>
+            <section class="col-md-12 col-lg-6" id="output_tab" style="display: none;">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <h5 id="output_destination_tab" class="card-title">Flight Details</h5>
+                        </div>
+                        <div id="output_details"></div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
