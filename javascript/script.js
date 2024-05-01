@@ -16,8 +16,8 @@ function submit() {
         params: {
             destination: destination_state,
             origin: origin_state,
-            return_date: "2024-04",
-            depart_date: "2024-03"
+            return_date: "2024-06",
+            depart_date: "2024-05"
         },
         headers: {
             'X-Access-Token': '85741e7b7e34bb7e025f03a2fc23abb9',
